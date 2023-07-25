@@ -1,0 +1,148 @@
+{% extends 'landingPage/base.html' %}
+{% load static %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+    <section style="margin-top: 150px;">
+        <img src="{% static 'images/AgenSQL-Logo.png' %}" class="rounded mx-auto d-block mt-5" alt="...">
+        <div class="mt-4 w-50 mx-auto fs-6">
+            <p class="text-center fw-bold">An integration of Bitnine’s DB technology and PG expertise</p>
+            <p class="text-center">
+                AgensSQL is an all-new relational DBMS based on PostgreSQL, with years of expertise
+                        and knowledge accumulated through database research and development.
+            </p>
+            <p class="text-center">
+                The enterprise package, along with AgensSQL engine, is an all-in-one solution that ensures
+                        the efficiency and scalability of data management.
+            </p>
+            <p class="text-center">
+                Get AgensSQL now for stable operation and management services at a reduced
+                        maintenance cost.
+            </p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary me-5">Primary</button>
+            <button type="button" class="btn btn-primary me-5">Primary</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+    </section>
+    <section class="bg-body-secondary mt-5">
+        <img src="{% static 'images/img.png' %}" class="rounded mx-auto d-block p-5" alt="..."  width="700" height="650">
+    </section>
+    <section>
+        <div class="mt-5 w-50 mx-auto">
+            <p class="text-center fw-bold fs-3">Key features</p>
+            <p class="text-center fs-7">
+                Manage your data with Agens Enterprise Package
+                    Essential enterprise features such 
+                        as high availability and sharding are provided
+            </p>
+        </div>
+        <img src="{% static 'images/img2.png' %}" class="rounded mx-auto d-block mt-5" alt="..." width="730" height="300">
+    </section>
+    <section class="bg-body-secondary mt-5 pb-5">
+        <div class="mt-5 w-50 mx-auto">
+            <p class="text-center fw-bold fs-3">AgensSQL DB Engine</p>
+            <p class="text-center fs-5 text-decoration-underline">
+                Enhanced Data Security
+            </p>
+            <p class="text-center fs-6">
+                AgensSQL is a PostgreSQL-based DBMS
+                    that guarantees optimal security and stability.
+            </p>
+        </div>
+        <div class="container text-center mt-5">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                            Password Profile
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">user password policy reinforces login security</li>
+                            <li class="list-group-item">excessive failed login attempts lock an account</li>
+                            <li class="list-group-item">define rules for password complexity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                            Data Redaction
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">user password policy reinforces login security</li>
+                            <li class="list-group-item">excessive failed login attempts lock an account</li>
+                            <li class="list-group-item">define rules for password complexity</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                            Auditing
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">user password policy reinforces login security</li>
+                            <li class="list-group-item">excessive failed login attempts lock an account</li>
+                            <li class="list-group-item">define rules for password complexity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="mt-5 w-50 mx-auto">
+            <p class="text-center fw-bold fs-3">Agens Enterprise Package</p>
+            <p class="text-center fs-6">
+                Agens Enterprise Package comes with a high availability management server that
+                        supports backup and data monitoring dashboard 
+                            that helps enterprise customers manage their data efficiently.
+            </p>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-4">
+                <p class="fw-bold fs-5">Agens HA Manager</p>
+                <p>HA Clustering – Failover/Failback, Load-balancing</p>
+                <img src="{% static 'images/img3.png' %}" class="" alt="..." width="340" height="300">
+                <p>Replication</p>
+            </div>
+            <div class="col-4">
+                <p class="fw-bold fs-5">Agens Enterprise Manager</p>
+                <div class="rounded border border-3 border-primary p-2 mb-2">
+                    <p>Backup/Restore</p>
+                </div>
+                <div class="rounded border border-3 border-primary p-2 mb-2">
+                    <p>DB monitoring dashboard</p>
+                </div>
+                <div class="rounded border border-3 border-primary p-2 mb-2">
+                    <p>Schdule Management</p>
+                </div>
+                <div class="rounded border border-3 border-primary p-2 mb-2">
+                    <p>Database Audit</p>
+                </div>
+                <div class="rounded border border-3 border-primary p-2 mb-2">
+                    <p>SQL Monitoring</p>
+                </div>
+                <div class="rounded border border-3 border-primary p-2 mb-2">
+                    <p>Perfomance Management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+{% else %}
+    <section style="margin-top: 175px; margin-bottom:175px">
+        <div class="text-center">
+            <h1 class="text-center fw-bold mb-5" style="font-size: 60px;">Welcome to the Bitnine Website!</h1>
+            <p class="mb-5 fs-4">To view the full Bitnine website, 
+                kindly <a href="{% url 'register' %}">Register</a> an account or <a href="{% url 'login' %}">log in </a> if you already have one</p>
+            <a class="rounded border border-3 border-primary p-2 m-3" href="{% url 'register' %}">Register</a>
+            <a class="rounded border border-3 border-primary p-2 m-3" href="{% url 'login' %}">Log In</a>
+        </div>
+    </section>
+{% endif %}
+
+{% endblock content %}
